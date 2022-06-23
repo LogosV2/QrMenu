@@ -13,7 +13,7 @@ export class MenuComponent implements OnInit {
   menus: Menu = [
     {price: '22zł', name: "Sernik", img: '#'},
     {price: '15zł', name: "ApplePie", img: '#'},
-    {price: '23zł', name: "Rolada Owocowa", img: '#'},
+    {price: '23zł', name: "Rolada owocowa", img: '#'},
   ];
 
   constructor(private router: Router) {
