@@ -1,18 +1,21 @@
-<h1>Menu works</h1>
-<div *ngFor="let menu of menus"  class="card">
+<button (click)="backHome()" mat-stroked-button color="basic">Cukiernia Marek Górka</button>
+<div *ngFor="let menu of menus let i = index" class="card">
   <div class="card-container">
-    <div   class="card-name">
+    <div class="card-name">
       <p>{{menu.name}}</p>
     </div>
     <div class="card-img">
-      <img src="{{menu.img}}">
+      <img src="{{menu.img}}" alt="{{menu.alt}}">
     </div>
     <div class="card-price">
-      <p>{{menu.price}}</p>
+      <p>{{menu.price}}zł</p>
     </div>
-    <div>
-      <button mat-stroked-button color="warn">Dodaj do koszyka</button>
+    <div class="card-btn">
+      <button (click)="addToBasket(i);" mat-stroked-button color="warn">
+        {{menu.btnVal}}
+      </button>
     </div>
   </div>
 </div>
+
 <button (click)="backHome()" mat-stroked-button color="warn">Powrot</button>

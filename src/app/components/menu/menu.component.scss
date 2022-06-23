@@ -1,22 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
 .card {
-  border: 1px solid red;
+  border: 2px solid red;
+  border-radius: 20px;
   width: 200px;
-  &-container{
-  padding: 10px;
+
+  &-container {
+    padding: 12px 0;
   }
+
   .card-name {
     display: flex;
     justify-content: center;
+    padding: 6px 0;
   }
 
   .card-img {
     display: flex;
     justify-content: center;
+    padding: 6px 0;
   }
 
   .card-price {
     display: flex;
     justify-content: center;
+    padding: 6px 0;
     color: blue;
+  }
+
+  .card-btn {
+    display: flex;
+    justify-content: center;
+    padding: 6px 0;
   }
 }
