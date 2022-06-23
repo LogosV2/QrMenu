@@ -1,0 +1,22 @@
+.card {
+  border: 1px solid red;
+  width: 200px;
+  &-container{
+  padding: 10px;
+  }
+  .card-name {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-price {
+    display: flex;
+    justify-content: center;
+    color: blue;
+  }
+}
