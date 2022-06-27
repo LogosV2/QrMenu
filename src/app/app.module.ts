@@ -31,7 +31,7 @@ import {storeReducer} from "./components/store-board/menu-store/store.reducer";
     MatButtonModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    StoreModule.forRoot({storeReducer},{}),
+    StoreModule.forRoot({storeReducer}),
   ],
   providers: [],
   bootstrap: [AppComponent]

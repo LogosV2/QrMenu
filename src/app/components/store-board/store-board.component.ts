@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {Store} from "@ngrx/store";
-import {Observable} from "rxjs/";
+import {Observable} from "rxjs";
 import {login} from "./menu-store/app.actions";
 import {selectFeature, selectFeature2} from "./menu-store/app.selector";
 
@@ -16,10 +16,7 @@ interface AppState{
 
 
 export class StoreBoardComponent implements OnInit {
-  message$: Observable<string>
-  constructor( private store: Store) {
-    this.message$ = this.store.select('message')
-  }
+  constructor( private store: Store){}
 
   polishMessage() {
     this.store.dispatch(login({password:'',username:''}))
@@ -30,6 +27,7 @@ export class StoreBoardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // @ts-ignore
     this.store.select(selectFeature2).subscribe(res=>{
       console.log(res)
     })
