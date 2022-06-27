@@ -12,13 +12,16 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatCardModule} from "@angular/material/card";
 import { StoreModule } from '@ngrx/store';
+import { StoreBoardComponent } from './components/store-board/store-board.component';
+import {storeReducer} from "./components/store-board/menu-store/store.reducer";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    WaiterInfoComponent
+    WaiterInfoComponent,
+    StoreBoardComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { StoreModule } from '@ngrx/store';
     MatButtonModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({storeReducer},{}),
   ],
   providers: [],
   bootstrap: [AppComponent]

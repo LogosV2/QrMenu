@@ -1,7 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
-type Menu = Array<{ price: number; name: string; img: string; alt: string, btnVal: string }>;
+
+type Menu = Array<{
+  price: number;
+  name: string;
+  img: string;
+  alt: string,
+  btnVal: string
+}>;
 
 @Component({
   selector: 'app-menu',
@@ -11,9 +18,27 @@ type Menu = Array<{ price: number; name: string; img: string; alt: string, btnVa
 export class MenuComponent implements OnInit {
   private basket: any = []
   menus: Menu = [
-    {price: 22, name: "Sernik", img: '#', alt: 'ciasto1', btnVal: 'Dodaj do koszyka'},
-    {price: 15, name: "ApplePie", img: '#', alt: 'ciasto2', btnVal: 'Dodaj do koszyka'},
-    {price: 23, name: "Rolada owocowa", img: '#', alt: 'ciasto3', btnVal: 'Dodaj do koszyka'},
+    {
+      price: 22,
+      name: "Sernik",
+      img: '#',
+      alt: 'ciasto1',
+      btnVal: 'Dodaj do koszyka'
+    },
+    {
+      price: 15,
+      name: "ApplePie",
+      img: '#',
+      alt: 'ciasto2',
+      btnVal: 'Dodaj do koszyka'
+    },
+    {
+      price: 23,
+      name: "Rolada owocowa",
+      img: '#',
+      alt: 'ciasto3',
+      btnVal: 'Dodaj do koszyka'
+    },
   ];
 
 
@@ -27,9 +52,13 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['home'])
   }
 
-  addToBasket(i: any) {
+  addToBasket(i: number) {
     this.basket = this.menus[i];
     console.log(this.basket)
     this.menus[i].btnVal = 'Kupione'
+  }
+
+  goStore() {
+    this.router.navigate(['store'])
   }
 }
