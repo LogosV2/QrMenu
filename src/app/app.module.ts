@@ -13,7 +13,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatCardModule} from "@angular/material/card";
 import { StoreModule } from '@ngrx/store';
 import { StoreBoardComponent } from './components/store-board/store-board.component';
-import {storeReducer} from "./components/store-board/menu-store/store.reducer";
+import {app} from "./store/store.reducer";
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {storeReducer} from "./components/store-board/menu-store/store.reducer";
     MatButtonModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    StoreModule.forRoot({storeReducer}),
+    StoreModule.forRoot({app}),
+     StoreDevtoolsModule.instrument(),
   ],
   providers: [],
   bootstrap: [AppComponent]

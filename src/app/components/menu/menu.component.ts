@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {Store} from "@ngrx/store";
+import {addToBasket} from "../../store/app.actions";
 
 
 type Menu = Array<{
@@ -42,7 +44,7 @@ export class MenuComponent implements OnInit {
   ];
 
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private store: Store) {
   }
 
   ngOnInit(): void {
@@ -56,6 +58,7 @@ export class MenuComponent implements OnInit {
     this.basket = this.menus[i];
     console.log(this.basket)
     this.menus[i].btnVal = 'Kupione'
+    this.store.dispatch(addToBasket({item:this.menus[i]}));
   }
 
   goStore() {

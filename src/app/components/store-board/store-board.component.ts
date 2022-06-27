@@ -1,25 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
 import {Store} from "@ngrx/store";
-import {Observable} from "rxjs";
-import {login} from "./menu-store/app.actions";
-import {selectFeature, selectFeature2} from "./menu-store/app.selector";
+import {login} from "../../store/app.actions";
+import {selectFeature2, shoppingBagItems$} from "../../store/app.selector";
+import {AppState} from "../../store/store.reducer";
 
-interface AppState{
-  message: string
-}
 @Component({
   selector: 'app-store-board',
   templateUrl: './store-board.component.html',
   styleUrls: ['./store-board.component.scss']
 })
-
-
 export class StoreBoardComponent implements OnInit {
-  constructor( private store: Store){}
+  shoppingBagItems!: any[];
+
+  constructor(private store: Store<AppState>) {
+  }
 
   polishMessage() {
-    this.store.dispatch(login({password:'',username:''}))
+    this.store.dispatch(login({password: '', username: ''}))
   }
 
   frenchMessage() {
@@ -27,18 +24,11 @@ export class StoreBoardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // @ts-ignore
-    this.store.select(selectFeature2).subscribe(res=>{
+    this.store.select(shoppingBagItems$).subscribe(res => {
       console.log(res)
+      this.shoppingBagItems = res;
     })
 
   }
-
-
-  // constructor(private router: Router) {
-  // }
-  // backHome() {
-  //   this.router.navigate(['menu'])
-  // }
 
 }
