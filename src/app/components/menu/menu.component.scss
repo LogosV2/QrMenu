@@ -3,12 +3,13 @@
 }
 
 .card {
-  border: 2px solid red;
+  border: 1px solid lightgray;
   border-radius: 20px;
-  width: 200px;
+  width: 320px;
 
   &-container {
     padding: 12px 0;
+    text-align: center;
   }
 
   .card-name {

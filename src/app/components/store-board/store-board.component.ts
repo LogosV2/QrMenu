@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from "@ngrx/store";
-import {login} from "../../store/app.actions";
-import {selectFeature2, shoppingBagItems$} from "../../store/app.selector";
+import {shoppingBagItems$} from "../../store/app.selector";
 import {AppState} from "../../store/store.reducer";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-store-board',
@@ -11,24 +11,19 @@ import {AppState} from "../../store/store.reducer";
 })
 export class StoreBoardComponent implements OnInit {
   shoppingBagItems!: any[];
+  totalPrice!: any[] | undefined;
 
-  constructor(private store: Store<AppState>) {
+  constructor(private router: Router, private store: Store<AppState>) {
   }
 
-  polishMessage() {
-    this.store.dispatch(login({password: '', username: ''}))
-  }
-
-  frenchMessage() {
-    this.store.dispatch({type: 'FRENCH'})
+  backMenu() {
+    this.router.navigate(['menu'])
   }
 
   ngOnInit(): void {
     this.store.select(shoppingBagItems$).subscribe(res => {
       console.log(res)
       this.shoppingBagItems = res;
-    })
-
+      })
   }
-
 }

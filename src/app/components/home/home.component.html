@@ -1,7 +1,30 @@
 <div>
-  <h1>Witamy w Cukierni Marek Górka</h1>
-  <p>Lorem Ipsum</p>
-</div>
-<button (click)="goToMenu()" mat-stroked-button color="warn">Zamow online</button>
-<button (click)="callWaiter()" mat-stroked-button color="warn">Wezwij Kelnera</button>
+  <div style="display: flex; justify-content: center; align-content: center;">
+    <video autoplay muted loop style="position: fixed; border-radius: 20px">
+      <source
+        src="https://cdn.dribbble.com/users/1784672/screenshots/15911232/media/a634927e32ad0f1b9b775a9969b5aeb0.mp4"
+        type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+  <div style="  display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 550px;">
+    <button style="width: 200px;
+            margin: 6px;
+            font-size: 20px;
+            color: darkgreen;
+            font-family: monospace;
+            height: 60px;" (click)="goToMenu()" mat-stroked-button color="warn">Zamow online
+    </button>
+    <button style="width: 200px;
+            margin: 6px;
+            font-size: 20px;
+            color: darkgreen;
+            font-family: monospace;
+            height: 60px;" (click)="callWaiter()" mat-stroked-button color="warn">Wezwij Kelnera
+    </button>
 
+  </div>
+</div>

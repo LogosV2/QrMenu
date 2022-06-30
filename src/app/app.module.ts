@@ -15,6 +15,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreBoardComponent } from './components/store-board/store-board.component';
 import {app} from "./store/store.reducer";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import { HeaderComponent } from './components/header/header.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
     HomeComponent,
     MenuComponent,
     WaiterInfoComponent,
-    StoreBoardComponent
+    StoreBoardComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
     MatProgressSpinnerModule,
     MatCardModule,
     StoreModule.forRoot({app}),
-     StoreDevtoolsModule.instrument(),
+    StoreDevtoolsModule.instrument(),
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
