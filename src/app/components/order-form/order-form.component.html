@@ -1,0 +1,67 @@
+<div class="rate-component">
+  <form [formGroup]="form">
+    <div>
+      <div style="display: flex; justify-content: center">
+        <input type="text" placeholder="Name" formControlName="name">
+      </div>
+      <div style="display: flex; justify-content: center">
+        <input type="text" placeholder="Surname" formControlName="surname"/>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <input type="tel" placeholder="Phone" formControlName="phone"/>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <label>Wybierz Biszkopt</label>
+        <select formControlName="cake" placeholder="dupa">
+          <option value="Jasnny biszkopt">Jasnny biszkopt</option>
+          <option value="Ciemnnt Biszkopt">Ciemnnt Biszkopt</option>
+        </select>
+        <label>Wybierz krem</label>
+        <select formControlName="cream" placeholder="dupa">
+          <option value="krem truskawka">truskawka</option>
+          <option value="kawowy krem">kawowy</option>
+          <option value="malinowy">malinowy</option>
+          <option value="smietankowy">smietankowy</option>
+        </select>
+        <label>Wybierz dodatki:</label>
+        <select formControlName="topping" placeholder="dupa">
+          <option value="Swieże owoce">Swieże owoce</option>
+          <option value="Dekoracja z czekolady">Dekoracja z czekolady</option>
+        </select>
+        <label>Wybierz Rozmiar:</label>
+        <select formControlName="size" placeholder="dupa">
+          <option value="Duzy">Duzy</option>
+          <option value="Sredni">Sredni</option>
+          <option value="Maly">Maly</option>
+        </select>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center">
+      <button style="width: 200px;
+            margin: 6px;
+            font-size: 20px;
+            color: darkgreen;
+            font-family: monospace;
+            height: 60px;" (click)="sendForm()" mat-stroked-button color="warn">Zamow online
+      </button>
+    </div>
+  </form>
+</div>
+<div style="display: flex; justify-content: center">
+  <button style="
+            margin: 6px;
+            font-size: 20px;
+            color: black;
+            font-family: monospace;
+            height: 60px;" (click)="resetForm()" mat-stroked-button color="warn">Resetuj Zamówiennie
+  </button>
+</div>
+<div style="display: flex; justify-content: center">
+  <button style="
+            margin: 6px;
+            font-size: 20px;
+            color: black;
+            font-family: monospace;
+            height: 60px;" (click)="backHome()" mat-stroked-button color="warn">Powrót
+  </button>
+</div>

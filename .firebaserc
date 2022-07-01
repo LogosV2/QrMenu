@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "menu-221e4"
+  },
+  "targets": {
+    "menu-221e4": {
+      "hosting": {
+        "menu-app": [
+          "menu-221e4"
+        ]
+      }
+    }
+  }
+}

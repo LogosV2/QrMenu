@@ -21,4 +21,8 @@ export class HomeComponent implements OnInit {
   callWaiter() {
     this.router.navigate(['waiter-info'])
   }
+
+  goToOrderForm() {
+    this.router.navigate(['order-form'])
+  }
 }

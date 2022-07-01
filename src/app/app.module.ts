@@ -17,6 +17,10 @@ import {app} from "./store/store.reducer";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import { HeaderComponent } from './components/header/header.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { OrderFormComponent } from './components/order-form/order-form.component';
+import { environment } from '../environments/environment';
+import {AngularFireModule} from "@angular/fire/compat";
+import { FinalyOrderCakeInfoComponent } from './components/finaly-order-cake-info/finaly-order-cake-info.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +29,12 @@ import {ReactiveFormsModule} from "@angular/forms";
     MenuComponent,
     WaiterInfoComponent,
     StoreBoardComponent,
-    HeaderComponent
+    HeaderComponent,
+    OrderFormComponent,
+    FinalyOrderCakeInfoComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -38,6 +45,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     StoreModule.forRoot({app}),
     StoreDevtoolsModule.instrument(),
     ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
