@@ -1,23 +1,62 @@
-<div style="display: flex; justify-content: center">
-  <h1>Koszyk:</h1>
-</div>
-<div style="display: block;
+<body
+  background="assets/1000_F_180829724_YxHOabb3Gkt4uPQCjA4hsH097kjrSM9r.jpeg"
+  style="
+  background-position:50% 50%;
+  height:100em;
+  background-size:cover;
+  width:auto;">
+<div style="display:flex;justify-content: center;opacity: 0.9;">
+  <div style="
+margin-top: 40px;
+padding: 20px;
+border-radius: 20px;
+border:2px dotted lightgray;
+text-align: center;
+width: 350px;
+min-height:200px;
+font-family: system-ui;
+background-color: aliceblue;
+color: darkslategray">
+    <div style="display: flex; justify-content: center">
+      <h1>Koszyk:</h1>
+    </div>
+    <div style="display: block;
     text-align: center;">
-
-  <div *ngFor="let item of shoppingBagItems let i = index">
-    <h2>{{item.name}}</h2>
-    <h3>{{item.price}}zł/szt</h3>
-  </div>
-</div>
-<div style="display: flex; justify-content: center">
-  <button style="
+      <div style="
+      border-bottom:2px dotted lightgray;
+      margin: 12px 0;"
+           *ngFor="let item of shoppingBagItems let i = index">
+        <h2>{{item.name}}</h2>
+        <h3>{{item.price}}zł/szt
+          <h4>ilość:{{item.count}}</h4>
+          <button style="
+            margin: 6px;
+            font-size: 20px;
+            color: red;
+            font-family: monospace;
+            height: 30px;" (click)="deleteItem(item)" mat-stroked-button color="warn">Usuń
+          </button>
+        </h3>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center">
+      <button style="
+            margin: 6px;
+            font-size: 20px;
+            color: darkgreen;
+            font-family: monospace;
+            height: 60px;" (click)="goCheckout()" mat-stroked-button color="warn">Wyślij Zamówienie
+      </button>
+    </div>
+    <div style="display: flex; justify-content: center">
+      <button style="
             margin: 6px;
             font-size: 20px;
             color: black;
             font-family: monospace;
             height: 60px;" (click)="backMenu()" mat-stroked-button color="warn">Powrót
-  </button>
+      </button>
+    </div>
+  </div>
 </div>
-
-
 

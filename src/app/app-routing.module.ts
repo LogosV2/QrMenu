@@ -6,6 +6,7 @@ import {WaiterInfoComponent} from "./components/waiter-info/waiter-info.componen
 import {StoreBoardComponent} from "./components/store-board/store-board.component";
 import {FinalyOrderCakeInfoComponent} from "./components/finaly-order-cake-info/finaly-order-cake-info.component";
 import {OrderFormComponent} from "./components/order-form/order-form.component";
+import {CheckoutInfoComponent} from "./components/checkout-info/checkout-info.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'store', component: StoreBoardComponent},
   {path: 'order-cake-info', component: FinalyOrderCakeInfoComponent},
   {path: 'order-form', component: OrderFormComponent},
+  {path: 'checkout', component: CheckoutInfoComponent},
 ];
 
 @NgModule({

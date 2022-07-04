@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
 
   callWaiter() {
     this.router.navigate(['waiter-info'])
+    console.log('Kelner wezwany')
   }
 
   goToOrderForm() {

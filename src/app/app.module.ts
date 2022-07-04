@@ -21,6 +21,7 @@ import { OrderFormComponent } from './components/order-form/order-form.component
 import { environment } from '../environments/environment';
 import {AngularFireModule} from "@angular/fire/compat";
 import { FinalyOrderCakeInfoComponent } from './components/finaly-order-cake-info/finaly-order-cake-info.component';
+import { CheckoutInfoComponent } from './components/checkout-info/checkout-info.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FinalyOrderCakeInfoComponent } from './components/finaly-order-cake-inf
     StoreBoardComponent,
     HeaderComponent,
     OrderFormComponent,
-    FinalyOrderCakeInfoComponent
+    FinalyOrderCakeInfoComponent,
+    CheckoutInfoComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

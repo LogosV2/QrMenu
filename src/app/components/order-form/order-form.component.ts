@@ -24,6 +24,8 @@ export class OrderFormComponent implements OnInit {
       cream: ['', Validators.required],
       topping: ['', Validators.required],
       size: ['', Validators.required],
+      data: ['', Validators.required],
+      orderTextInfo: ['', Validators.required],
 
 
     });

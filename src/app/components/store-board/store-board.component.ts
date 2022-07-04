@@ -3,6 +3,7 @@ import {Store} from "@ngrx/store";
 import {shoppingBagItems$} from "../../store/app.selector";
 import {AppState} from "../../store/store.reducer";
 import {Router} from "@angular/router";
+import {AngularFirestore} from "@angular/fire/compat/firestore";
 
 @Component({
   selector: 'app-store-board',
@@ -13,7 +14,8 @@ export class StoreBoardComponent implements OnInit {
   shoppingBagItems!: any[];
   totalPrice!: any[] | undefined;
 
-  constructor(private router: Router, private store: Store<AppState>) {
+
+  constructor(private router: Router, private store: Store<AppState>, private fire: AngularFirestore) {
   }
 
   backMenu() {
@@ -22,8 +24,19 @@ export class StoreBoardComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.select(shoppingBagItems$).subscribe(res => {
-      console.log(res)
+      console.log(res);
       this.shoppingBagItems = res;
-      })
+    })
+  }
+
+  goCheckout() {
+    this.fire.collection('menu-order').doc().set(Object.assign({}, this.shoppingBagItems));
+    this.router.navigate(['checkout']);
+    console.log('wyslano zamowienie');
+    console.log(this.shoppingBagItems);
+  }
+
+  deleteItem(obj:any) {
+    this.shoppingBagItems = this.shoppingBagItems.filter(item => item !== obj);
   }
 }

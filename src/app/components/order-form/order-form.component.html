@@ -1,6 +1,22 @@
-<div>
+<body
+  background="assets/1000_F_180829724_YxHOabb3Gkt4uPQCjA4hsH097kjrSM9r.jpeg"
+  style="
+  background-position:50% 50%;
+  height:60em;
+  background-size:cover;
+  width:auto;">
   <div style="display: flex; justify-content: center">
-    <form style="padding: 20px;border-radius: 20px;border:2px dotted lightgray;text-align: center;width: 350px;font-family: system-ui;background-color: aliceblue;color: darkslategray" [formGroup]="form">
+    <form style="
+    opacity: 0.9;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    border:2px dotted lightgray;
+    text-align: center;
+    width: 350px;
+    font-family: system-ui;
+    background-color: aliceblue;
+    color: darkslategray" [formGroup]="form">
       <div style="text-align: center;">
         <h1>Podaj Dane:</h1>
       </div>
@@ -22,6 +38,12 @@
         </div>
         <div style="display: flex; justify-content: center">
           <input style="width: 150px;" type="tel" formControlName="phone"/>
+        </div>
+        <div style="display: flex; justify-content: center">
+          <label>Wpisz datę odbioru:</label>
+        </div>
+        <div style="display: flex; justify-content: center">
+          <input style="width: 150px;" type="date" formControlName="data"/>
         </div>
         <div style="text-align: center;margin: 0;padding-top: 10px">
           <h2>Wybierz Tort:</h2>
@@ -65,6 +87,12 @@
             <option value="Maly">Maly</option>
           </select>
         </div>
+        <div style="display: flex; justify-content: center">
+          <label>Wpisz swoje uwagi:</label>
+        </div>
+        <div style="display: flex; justify-content: center">
+          <textarea style="width: 150px;height: 50px" type="textarea" formControlName="orderTextInfo"></textarea>
+        </div>
       </div>
       <div style="display: flex; justify-content: center">
         <button style="width: 200px;
@@ -95,4 +123,3 @@
             height: 60px;" (click)="backHome()" mat-stroked-button color="warn">Powrót
     </button>
   </div>
-</div>

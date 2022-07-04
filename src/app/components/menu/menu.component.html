@@ -1,20 +1,20 @@
 <div style="display: flex;justify-content: center;padding: 24px 0;flex-wrap: wrap">
-<div *ngFor="let menu of menus let i = index" class="card">
-  <div class="card-container">
-    <div class="card-name">
-      <h1>{{menu.name}}</h1>
-    </div>
-    <div class="card-img">
-      <img style="height: 150px; width: 150px;border-radius: 25px;" src="{{menu.img}}" alt="{{menu.alt}}">
-    </div>
-    <div class="card-price">
-      <h2>{{menu.price}}zł</h2>
-    </div>
-    <div class="card-btn">
-      <button (click)="addToBasket(i);" mat-stroked-button color="warn">
-        <h3>{{menu.btnVal}}</h3>
-      </button>
-    </div>
+  <div *ngFor="let menu of menus let i = index" class="card">
+    <div class="card-container">
+      <div class="card-name">
+        <h1>{{menu.name}}</h1>
+      </div>
+      <div class="card-img">
+        <img style="height: 200px; width: 200px;border-radius: 25px;" src="{{menu.img}}" alt="{{menu.alt}}">
+      </div>
+      <div class="card-price">
+        <h2>{{menu.price}}zł</h2>
+      </div>
+      <div class="card-btn">
+        <button (click)="addToBasket(i);" mat-stroked-button color="warn">
+          <h3>{{menu.btnVal}}</h3>
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -37,5 +37,3 @@
             height: 60px;" (click)="backHome()" mat-stroked-button color="warn">Powrót
   </button>
 </div>
-<!--<button (click)="backHome()" mat-stroked-button color="warn">Powrot</button>-->
-<!--<button (click)="goStore()" mat-stroked-button color="warn">Idz do koszyka</button>-->
