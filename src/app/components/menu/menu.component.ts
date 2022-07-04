@@ -41,6 +41,27 @@ export class MenuComponent implements OnInit {
       alt: 'ciasto3',
       btnVal: 'Dodaj do koszyka'
     },
+    {
+      price: 16,
+      name: "Bułka",
+      img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAOZ2L00gkt2gLsechWmS9H589lPkfjM5PeA&usqp=CAU',
+      alt: 'ciasto3',
+      btnVal: 'Dodaj do koszyka'
+    },
+    {
+      price: 73,
+      name: "Tort",
+      img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAOZ2L00gkt2gLsechWmS9H589lPkfjM5PeA&usqp=CAU',
+      alt: 'ciasto3',
+      btnVal: 'Dodaj do koszyka'
+    },
+    {
+      price: 73,
+      name: "Tort",
+      img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAOZ2L00gkt2gLsechWmS9H589lPkfjM5PeA&usqp=CAU',
+      alt: 'ciasto3',
+      btnVal: 'Dodaj do koszyka'
+    },
   ];
 
 

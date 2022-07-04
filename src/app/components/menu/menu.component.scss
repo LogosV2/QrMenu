@@ -3,9 +3,14 @@
 }
 
 .card {
-  //border: 1px solid lightgray;
-  //border-radius: 20px;
-  //width: 320px;
+  border-radius: 20px;
+  border:2px dotted lightgray;
+  text-align: center;
+  width: 350px;
+  font-family: system-ui;
+  background-color: aliceblue;
+  color: darkslategray;
+  margin: 0 8px 8px 0;
 
   &-container {
     padding: 12px 0;

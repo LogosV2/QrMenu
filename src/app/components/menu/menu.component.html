@@ -1,21 +1,24 @@
+<div style="display: flex;justify-content: center;padding: 24px 0;flex-wrap: wrap">
 <div *ngFor="let menu of menus let i = index" class="card">
   <div class="card-container">
     <div class="card-name">
-      <p>{{menu.name}}</p>
+      <h1>{{menu.name}}</h1>
     </div>
     <div class="card-img">
       <img style="height: 150px; width: 150px;border-radius: 25px;" src="{{menu.img}}" alt="{{menu.alt}}">
     </div>
     <div class="card-price">
-      <p>{{menu.price}}zł</p>
+      <h2>{{menu.price}}zł</h2>
     </div>
     <div class="card-btn">
       <button (click)="addToBasket(i);" mat-stroked-button color="warn">
-        {{menu.btnVal}}
+        <h3>{{menu.btnVal}}</h3>
       </button>
+    </div>
     </div>
   </div>
 </div>
+
 <div style="display: flex; justify-content: center">
   <button style="
             margin: 6px;
