@@ -8,3 +8,7 @@ export const addToBasket = createAction(
   '[Store Page] Add to basket',
   props<{ item:any }>()
 );
+export const removeFromBasket = createAction(
+  '[Store Page] Remove from basket',
+  props<{ index:number }>()
+);

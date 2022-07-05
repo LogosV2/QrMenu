@@ -2,7 +2,8 @@
   background="assets/1000_F_180829724_YxHOabb3Gkt4uPQCjA4hsH097kjrSM9r.jpeg"
   style="
   background-position:50% 50%;
-  height:100em;
+  height:auto;
+  min-height: 700px;
   background-size:cover;
   width:auto;">
 <div style="display:flex;justify-content: center;opacity: 0.9;">
@@ -13,11 +14,11 @@ border-radius: 20px;
 border:2px dotted lightgray;
 text-align: center;
 width: 350px;
-min-height:200px;
+min-height:280px;
 font-family: system-ui;
 background-color: aliceblue;
 color: darkslategray">
-    <div style="display: flex; justify-content: center">
+    <div style="display: flex; justify-content: center; margin-top:30px;">
       <h1>Koszyk:</h1>
     </div>
     <div style="display: block;
@@ -34,7 +35,8 @@ color: darkslategray">
             font-size: 20px;
             color: red;
             font-family: monospace;
-            height: 30px;" (click)="deleteItem(item)" mat-stroked-button color="warn">Usuń
+            height: 30px;"
+                  (click)="deleteItem(i)" mat-stroked-button color="warn">Usuń
           </button>
         </h3>
       </div>

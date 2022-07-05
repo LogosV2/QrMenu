@@ -4,6 +4,7 @@ import {shoppingBagItems$} from "../../store/app.selector";
 import {AppState} from "../../store/store.reducer";
 import {Router} from "@angular/router";
 import {AngularFirestore} from "@angular/fire/compat/firestore";
+import {removeFromBasket} from "../../store/app.actions";
 
 @Component({
   selector: 'app-store-board',
@@ -36,7 +37,8 @@ export class StoreBoardComponent implements OnInit {
     console.log(this.shoppingBagItems);
   }
 
-  deleteItem(obj:any) {
-    this.shoppingBagItems = this.shoppingBagItems.filter(item => item !== obj);
+  deleteItem(index:number) {
+    // this.shoppingBagItems = this.shoppingBagItems.filter(item => item !== obj);
+    this.store.dispatch(removeFromBasket({index}))
   }
 }
