@@ -1,39 +1,29 @@
-<div>
-  <div style="display: flex; justify-content: center; align-content: center;">
-    <video autoplay muted loop style="margin: 40px;position: fixed; border-radius: 20px">
-      <source
-        src="https://cdn.dribbble.com/users/1784672/screenshots/15911232/media/a634927e32ad0f1b9b775a9969b5aeb0.mp4"
-        type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-  </div>
-  <div style="  display: flex;
-         justify-content: center;
-         align-items: center;
-         height: 650px;
-         flex-wrap: wrap;">
-    <button style="width: 200px;
-            margin: 6px;
-            font-size: 20px;
-            color: darkgreen;
-            font-family: monospace;
-            height: 60px;" (click)="goToMenu()" mat-stroked-button color="warn">Zamow online
-    </button>
-    <button style="width: 200px;
-            margin: 6px;
-            font-size: 20px;
-            color: darkgreen;
-            font-family: monospace;
-            height: 60px;" (click)="goToOrderForm()" mat-stroked-button color="warn">Zamow Tort
-    </button>
-    <button style="width: 200px;
-            margin: 6px;
-            font-size: 20px;
-            color: darkgreen;
-            font-family: monospace;
-            height: 60px;" (click)="callWaiter()" mat-stroked-button color="warn">Wezwij Kelnera
-    </button>
-
-
-  </div>
+<div class="background-container">
+  <video class="background-container-video"
+         autoplay muted loop>
+    <source
+      src="https://cdn.dribbble.com/users/1784672/screenshots/15911232/media/a634927e32ad0f1b9b775a9969b5aeb0.mp4"
+      type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+<div class="container-box">
+  <button
+    class="container-box-btn"
+    (click)="goToMenu()"
+    mat-stroked-button
+    color="warn">Zamow online
+  </button>
+  <button
+    class="container-box-btn"
+    (click)="goToOrderForm()"
+    mat-stroked-button
+    color="warn">Zamow Tort
+  </button>
+  <button
+    class="container-box-btn"
+    (click)="callWaiter()"
+    mat-stroked-button
+    color="warn">Wezwij Kelnera
+  </button>
 </div>

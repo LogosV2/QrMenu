@@ -1,45 +1,89 @@
 * {
   box-sizing: border-box;
-
 }
-.card {
-  height: 100%;
-  border-radius: 20px;
-  border:2px dotted lightgray;
-  text-align: center;
-  width: 300px;
-  font-family: system-ui;
-  background-color: aliceblue;
-  color: darkslategray;
-  margin: 0 8px 8px 0;
-  opacity: 0.9;
 
-  &-container {
-    padding: 12px 0;
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  flex-wrap: wrap;
+
+  .card {
+    height: 100%;
+    border-radius: 20px;
+    border: 2px dotted lightgray;
     text-align: center;
-  }
+    width: 300px;
+    font-family: system-ui;
+    background-color: aliceblue;
+    color: darkslategray;
+    margin: 0 8px 8px 0;
+    opacity: 0.9;
 
-  .card-name {
-    display: flex;
-    justify-content: center;
-    padding: 6px 0;
-  }
+    &-container {
+      padding: 12px 0;
+      text-align: center;
+    }
 
-  .card-img {
-    display: flex;
-    justify-content: center;
-    padding: 6px 0;
-  }
+    .card-name {
+      display: flex;
+      justify-content: center;
+      padding: 6px 0;
+    }
 
-  .card-price {
-    display: flex;
-    justify-content: center;
-    padding: 6px 0;
-    color: darkblue;
+    .card-img {
+      display: flex;
+      justify-content: center;
+      padding: 6px 0;
+
+      img {
+        height: 200px;
+        width: 200px;
+        border-radius: 25px;
+      }
+    }
+
+    .card-price {
+      display: flex;
+      justify-content: center;
+      padding: 6px 0;
+      color: darkblue;
+    }
+
+    .card-btn {
+      display: flex;
+      justify-content: center;
+      padding: 6px 0;
+
+      h3 {
+        margin: 8px;
+      }
+    }
   }
-  .card-btn {
-    display: flex;
-    justify-content: center;
-    padding: 6px 0;
+}
+
+.container-box-1 {
+  display: flex;
+  justify-content: center;
+
+  &-btn {
+    margin: 6px;
+    font-size: 20px;
+    color: darkgreen;
+    font-family: monospace;
+    height: 60px;
+  }
+}
+
+.container-box-2 {
+  display: flex;
+  justify-content: center;
+
+  &-btn {
+    margin: 6px;
+    font-size: 20px;
+    color: black;
+    font-family: monospace;
+    height: 60px;
   }
 }

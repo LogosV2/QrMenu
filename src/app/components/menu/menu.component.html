@@ -5,20 +5,23 @@
   height:auto;
   background-size:cover;
   width:auto;">
-<div style="display: flex;justify-content: center;padding: 24px 0;flex-wrap: wrap">
+<div class="container">
   <div *ngFor="let menu of menus let i = index" class="card">
     <div class="card-container">
       <div class="card-name">
         <h1>{{menu.name}}</h1>
       </div>
       <div class="card-img">
-        <img style="height: 200px; width: 200px;border-radius: 25px;" src="{{menu.img}}" alt="{{menu.alt}}">
+        <img src="{{menu.img}}" alt="{{menu.alt}}">
       </div>
       <div class="card-price">
         <h2>{{menu.price}}zł</h2>
       </div>
       <div class="card-btn">
-        <button (click)="addToBasket(i);" mat-stroked-button color="warn">
+        <button
+          (click)="addToBasket(i)"
+          mat-stroked-button
+          color="warn">
           <h3>{{menu.btnVal}}</h3>
         </button>
       </div>
@@ -26,21 +29,21 @@
   </div>
 </div>
 
-<div style="display: flex; justify-content: center">
-  <button style="
-            margin: 6px;
-            font-size: 20px;
-            color: darkgreen;
-            font-family: monospace;
-            height: 60px;" (click)="goStore()" mat-stroked-button color="warn">Idz do koszyka
+<div class="container-box-1">
+  <button
+    class="container-box-1-btn"
+    (click)="goStore()"
+    mat-stroked-button
+    color="warn">
+    Idz do koszyka
   </button>
 </div>
-<div style="display: flex; justify-content: center">
-  <button style="
-            margin: 6px;
-            font-size: 20px;
-            color: black;
-            font-family: monospace;
-            height: 60px;" (click)="backHome()" mat-stroked-button color="warn">Powrót
+<div class="container-box-2">
+  <button
+    class="container-box-2-btn"
+    (click)="backHome()"
+    mat-stroked-button
+    color="warn">
+    Powrót
   </button>
 </div>

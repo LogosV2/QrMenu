@@ -22,6 +22,7 @@ import { environment } from '../environments/environment';
 import {AngularFireModule} from "@angular/fire/compat";
 import { FinalyOrderCakeInfoComponent } from './components/finaly-order-cake-info/finaly-order-cake-info.component';
 import { CheckoutInfoComponent } from './components/checkout-info/checkout-info.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -35,20 +36,21 @@ import { CheckoutInfoComponent } from './components/checkout-info/checkout-info.
     FinalyOrderCakeInfoComponent,
     CheckoutInfoComponent
   ],
-  imports: [
-    AngularFireModule.initializeApp(environment.firebase),
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatButtonModule,
-    MatProgressSpinnerModule,
-    MatCardModule,
-    StoreModule.forRoot({app}),
-    StoreDevtoolsModule.instrument(),
-    ReactiveFormsModule,
+    imports: [
+        AngularFireModule.initializeApp(environment.firebase),
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatSliderModule,
+        MatButtonModule,
+        MatProgressSpinnerModule,
+        MatCardModule,
+        StoreModule.forRoot({app}),
+        StoreDevtoolsModule.instrument(),
+        ReactiveFormsModule,
+        MatFormFieldModule,
 
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -5,121 +5,129 @@
   height:60em;
   background-size:cover;
   width:auto;">
-  <div style="display: flex; justify-content: center">
-    <form style="
-    opacity: 0.9;
-    margin-top: 40px;
-    padding: 20px;
-    border-radius: 20px;
-    border:2px dotted lightgray;
-    text-align: center;
-    width: 350px;
-    font-family: system-ui;
-    background-color: aliceblue;
-    color: darkslategray" [formGroup]="form">
-      <div style="text-align: center;">
-        <h1>Podaj Dane:</h1>
+<div class="container">
+  <form class="container-form" [formGroup]="form">
+    <div>
+      <h1>Podaj Dane:</h1>
+    </div>
+    <div>
+      <div class="container-form-label">
+        <label>Wpisz Imię:</label>
       </div>
-      <div>
-        <div style="display: flex; justify-content: center">
-          <label>Wpisz Imię:</label>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <input style="width: 170px;" type="text" formControlName="name">
-        </div>
-        <div style="display: flex; justify-content: center">
-          <label>Wpisz Nazwisko:</label>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <input style="width: 170px;" type="text" formControlName="surname"/>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <label>Wpisz numer telefonu:</label>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <input style="width: 170px;" type="tel" formControlName="phone"/>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <label>Wybierz datę odbioru:</label>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <input style="width: 170px;" type="datetime-local" formControlName="data"/>
-        </div>
-        <div style="text-align: center;margin: 0;padding-top: 10px">
-          <h2>Wybierz Tort:</h2>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <label>Wybierz Biszkopt:</label>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <select style="width: 170px;" formControlName="cake">
-            <option value="Jasnny biszkopt">Jasnny biszkopt</option>
-            <option value="Ciemnnt Biszkopt">Ciemnnt Biszkopt</option>
-          </select>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <label>Wybierz krem:</label>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <select style="width: 170px;" formControlName="cream">
-            <option value="krem truskawka">truskawka</option>
-            <option value="kawowy krem">kawowy</option>
-            <option value="malinowy">malinowy</option>
-            <option value="smietankowy">smietankowy</option>
-          </select>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <label>Wybierz dodatki:</label>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <select style="width: 170px;" formControlName="topping">
-            <option value="Swieże owoce">Swieże owoce</option>
-            <option value="Dekoracja z czekolady">Dekoracja z czekolady</option>
-          </select>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <label>Wybierz Rozmiar:</label>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <select style="width: 170px;" formControlName="size">
-            <option value="Duzy">Duzy</option>
-            <option value="Sredni">Sredni</option>
-            <option value="Maly">Maly</option>
-          </select>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <label>Wpisz swoje uwagi:</label>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <textarea style="width: 170px;height: 50px" type="textarea" formControlName="orderTextInfo"></textarea>
-        </div>
+      <div class="container-form-input">
+        <input
+          class="container-form-input-text"
+          type="text"
+          formControlName="name">
       </div>
-      <div style="display: flex; justify-content: center">
-        <button style="width: 200px;
-            margin: 6px;
-            font-size: 20px;
-            color: darkgreen;
-            font-family: monospace;
-            height: 60px;" (click)="sendForm()" mat-stroked-button color="warn">Zamow online
-        </button>
+      <div class="container-form-label">
+        <label>Wpisz Nazwisko:</label>
       </div>
-    </form>
-  </div>
-  <div style="display: flex; justify-content: center">
-    <button style="
-            margin: 6px;
-            font-size: 20px;
-            color: black;
-            font-family: monospace;
-            height: 60px;" (click)="resetForm()" mat-stroked-button color="warn">Resetuj Zamówiennie
-    </button>
-  </div>
-  <div style="display: flex; justify-content: center">
-    <button style="
-            margin: 6px;
-            font-size: 20px;
-            color: black;
-            font-family: monospace;
-            height: 60px;" (click)="backHome()" mat-stroked-button color="warn">Powrót
-    </button>
-  </div>
+      <div class="container-form-input">
+        <input
+          class="container-form-input-text"
+          type="text"
+          formControlName="surname"/>
+      </div>
+      <div class="container-form-label">
+        <label>Wpisz numer telefonu:</label>
+      </div>
+      <div class="container-form-input">
+        <input
+          class="container-form-input-text"
+          type="tel"
+          formControlName="phone"/>
+      </div>
+      <div class="container-form-label">
+        <label>Wybierz datę odbioru:</label>
+      </div>
+      <div class="container-form-input">
+        <input
+          class="container-form-input-text"
+          type="datetime-local"
+          formControlName="data"/>
+      </div>
+      <div class="container-form-tittle2">
+        <h2>Wybierz Tort:</h2>
+      </div>
+      <div class="container-form-label">
+        <label>Wybierz Biszkopt:</label>
+      </div>
+      <div class="container-form-input">
+        <select
+          class="container-form-input-text"
+          formControlName="cake">
+          <option value="Jasnny biszkopt">Jasnny biszkopt</option>
+          <option value="Ciemnnt Biszkopt">Ciemnnt Biszkopt</option>
+        </select>
+      </div>
+      <div class="container-form-label">
+        <label>Wybierz krem:</label>
+      </div>
+      <div class="container-form-input">
+        <select
+          class="container-form-input-text"
+          formControlName="cream">
+          <option value="krem truskawka">truskawka</option>
+          <option value="kawowy krem">kawowy</option>
+          <option value="malinowy">malinowy</option>
+          <option value="smietankowy">smietankowy</option>
+        </select>
+      </div>
+      <div class="container-form-label">
+        <label>Wybierz dodatki:</label>
+      </div>
+      <div class="container-form-input">
+        <select
+          class="container-form-input-text"
+          formControlName="topping">
+          <option value="Swieże owoce">Swieże owoce</option>
+          <option value="Dekoracja z czekolady">Dekoracja z czekolady</option>
+        </select>
+      </div>
+      <div class="container-form-label">
+        <label>Wybierz Rozmiar:</label>
+      </div>
+      <div class="container-form-input">
+        <select
+          class="container-form-input-text"
+          formControlName="size">
+          <option value="Duzy">Duzy</option>
+          <option value="Sredni">Sredni</option>
+          <option value="Maly">Maly</option>
+        </select>
+      </div>
+      <div class="container-form-label">
+        <label>Wpisz swoje uwagi:</label>
+      </div>
+      <div class="container-form-input">
+        <textarea
+          class="container-form-input-textarea"
+          type="textarea"
+          formControlName="orderTextInfo"></textarea>
+      </div>
+    </div>
+    <div class="container-form-btn">
+      <button
+        class="container-form-btn-text"
+        (click)="sendForm()"
+        mat-stroked-button
+        color="warn">Zamow online
+      </button>
+    </div>
+  </form>
+</div>
+<div class="container-box-1">
+  <button class="container-box-1-btn"
+          (click)="resetForm()"
+          mat-stroked-button
+          color="warn">Resetuj Zamówiennie
+  </button>
+</div>
+<div class="container-box-2">
+  <button class="container-box-2-btn"
+          (click)="backHome()"
+          mat-stroked-button
+          color="warn">Powrót
+  </button>
+</div>
